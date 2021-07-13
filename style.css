@@ -1,0 +1,61 @@
+* {
+  font-family: 'Lato', sans-serif;
+  font-weight: normal;
+}
+html {
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgba(242, 126, 10, 0.126);
+}
+.container {
+  padding: 7rem 0;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 110px);
+  grid-template-rows: minmax(110px, auto) repeat(5, 110px);
+}
+
+button {
+  cursor: pointer;
+  font-size: 2.15rem;
+  border: 0.5px solid rgb(9, 9, 9);
+  outline: none;
+  background-color: rgba(228, 209, 209, 0.75);
+  font-weight: 500;
+}
+button:disabled {
+  background-color: rgba(228, 209, 209, 0.75);
+  color: black;
+}
+
+button.operator {
+  background-color: rgba(195, 140, 140, 0.818);
+  font-size: 2.25rem;
+}
+button#equal-sign {
+  background-color: rgba(144, 88, 88, 0.818);
+}
+button:hover {
+  background-color: rgba(235, 227, 227, 0.832);
+}
+#equal-sign {
+  grid-column: span 2;
+}
+.display {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  word-wrap: break-word;
+  word-break: break-all;
+  padding: 8px;
+  background-color: rgba(4, 4, 4, 0.75);
+  color: white;
+  font-size: 2.5rem;
+}
